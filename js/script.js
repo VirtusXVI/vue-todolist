@@ -36,12 +36,11 @@ var App = new Vue(
         },
         methods:{
             removetodoElement(index){
-                console.log(this.todolist.splice(index, 1));
-                // this.todolist.splice();
+                this.todolist.splice(index, 1);
             },
             addtodoElement(){
-                console.log(this.userInput);
-                this.todolist.push({text: this.userInput, done: false})
+                this.todolist.push({text: this.userInput, done: false});
+                this.userInput = "";
             }
         },
         mounted(){
