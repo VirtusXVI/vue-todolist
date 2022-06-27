@@ -41,6 +41,10 @@ var App = new Vue(
             addtodoElement(){
                 this.todolist.push({text: this.userInput, done: false});
                 this.userInput = "";
+            },
+            checkElement(index){
+                console.log(this.todolist[index].done);
+                this.todolist[index].done = !this.todolist[index].done;
             }
         },
         mounted(){

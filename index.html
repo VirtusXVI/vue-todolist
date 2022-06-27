@@ -24,7 +24,7 @@
                 </form>
             </div>
             <div class="ms_list_elements">
-                <div class="ms_list_element" v-for="(element,index) in todolist" :class="element.done ? 'ms_completed_task' : ''">
+                <div class="ms_list_element" v-for="(element,index) in todolist" :class="element.done ? 'ms_completed_task' : ''" @click="checkElement(index)">
                     {{ element.text }}
                     <span @click="removetodoElement(index)"><i class="fa-solid fa-xmark"></i></span>
                 </div>
