@@ -43,7 +43,6 @@ var App = new Vue(
                 this.userInput = "";
             },
             checkElement(index){
-                console.log(this.todolist[index].done);
                 this.todolist[index].done = !this.todolist[index].done;
             }
         },
