@@ -18,14 +18,14 @@
                 <form>
                     <div class="mb-3 ms_adjustments">
                       <label for="exampleInputEmail1" class="form-label">Add to list</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                      <input v-model="userInput" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
-                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button @click="addtodoElement()" type="button" class="btn btn-primary">Add</button>
                   </form>
             </div>
             <div class="ms_list_elements">
                 <div class="ms_list_element" v-for="(element,index) in todolist" :class="element.done ? 'ms_completed_task' : ''">
-                    {{ element.text }} 
+                    {{ element.text }}
                     <span @click="removetodoElement(index)"><i class="fa-solid fa-xmark"></i></span>
                 </div>
             </div>

@@ -31,12 +31,17 @@ var App = new Vue(
                     text: "Passare al bar",
                     done: true
                 }
-            ]
+            ],
+            userInput: ""
         },
         methods:{
             removetodoElement(index){
-                console.log(this.index);
+                console.log(this.todolist.splice(index, 1));
                 // this.todolist.splice();
+            },
+            addtodoElement(){
+                console.log(this.userInput);
+                this.todolist.push({text: this.userInput, done: false})
             }
         },
         mounted(){
